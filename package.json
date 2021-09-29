@@ -1,0 +1,32 @@
+{
+	"name": "netfelix-clone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+		"herokun-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/arigbedeomobolaji/netfelix-clone.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/arigbedeomobolaji/netfelix-clone/issues"
+	},
+	"homepage": "https://github.com/arigbedeomobolaji/netfelix-clone#readme",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.13.2",
+		"nodemon": "^2.0.9",
+		"save-dev": "0.0.1-security"
+	}
+}

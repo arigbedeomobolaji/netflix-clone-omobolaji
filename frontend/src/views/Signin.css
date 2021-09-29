@@ -1,0 +1,259 @@
+.signin{
+  max-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin__container{
+  height: 100%;
+  width: 700px;
+  max-width: 400px;
+  background: rgba(0,0,0,.78);
+  padding: 2rem 2rem 5rem;
+  margin: 45% 0 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin__title{
+  padding-bottom: 1.5rem;
+}
+
+.form__group{
+  padding-bottom: 1rem;
+  flex: 1 1 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.form__input{
+  background: #333;
+  color: #eee;
+  font-size: 0.95rem;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__input::placeholder{
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__label{
+  padding-left: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.remember{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #bbb;
+}
+.form__checkbox-container{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  outline: none;
+}
+
+.form__checkbox-container::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #777;
+  box-shadow: inset 1px 1px 5px #777, inset 0px 0px 5px #777;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  transform: translate(0,0);
+  z-index: 0;
+}
+.form__checkbox{
+  z-index: 3;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form__checkbox-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  color: #111;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.form__input--button{
+  background: #e50914;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.95rem 0.85rem;
+  border-radius: 5px;
+  transition: all 1s ease-in;
+}
+.form__input--button:hover{
+  background: #af141c;
+}
+.form__placeholder{
+  color: #666;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  font-size:0.1rem;
+  display: none;
+  width: 0;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: font .1s ease,top .1s ease,-webkit-transform .1s ease;
+}
+
+.show-icon {
+  position: absolute;
+  top: 40%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+}
+
+.form__placeholder-active{
+  top: 1px;
+  width: 100%;
+  opacity: 1;
+  left: 20px;
+  font-size: 0.8rem;
+  display: block;
+  transform: translateY(0); 
+}
+
+.form__placeholder-active + .form__input::placeholder{
+  opacity: 0;
+}
+
+.form__help{
+  color: #aaa;
+  font-size: 0.95rem;
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.signin__facebook{
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.signin__fb-img{
+  height: 20px;
+  object-fit: contain;
+}
+
+.signin__fb-title{
+  padding-left: 5px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.signin__new{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.signin__new-question{
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.signin__new-signup{
+  color: #eee;
+  padding-left: 5px;
+  font-size: 0.98rem;
+}
+.signin__new-signup:hover{
+  text-decoration: underline;
+}
+
+.signin__recaptcha-title{
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.signin__learn-more{
+  color: #4343ca;
+  padding-left: 5px;
+  font-weight: 500;
+}
+
+.signin__learn-more:hover{
+  text-decoration: underline;
+}
+
+.error{
+  color:#e87c03;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.form__input-error{
+  border-bottom: 3px solid #f88602;
+}
+
+.form__group-error{
+  padding: 0;
+}
+
+@media screen and (min-width: 900px){
+  .signin__container{
+    margin: 20% 0 300px;
+  }
+}
+
+@media (max-width: 769px){
+    .signin__container{
+    margin: 9rem 0.5rem 2rem;
+  }
+}
+
+@media (max-width: 400px){
+  .signin__container{
+    margin: 6rem 0.5rem;
+    padding: 2rem 0.5rem 3rem;
+  }
+
+  .form__input{
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 290px){
+  .form__input{
+    font-size: 0.8rem;
+  }
+}
+/* npm i mongoose bcryptjs express-async-handler jsonwebtoken */

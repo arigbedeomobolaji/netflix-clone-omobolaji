@@ -1,0 +1,56 @@
+.banner{
+  height: 70vh;
+}
+
+.banner__overlay{
+  background: linear-gradient(360deg,rgba(37,37,37,0.9) 20%, rgba(0,0,0,.1));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.banner__title{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.banner__overview{
+  font-size: 0.9rem;
+  max-width: 500px;
+}
+
+.banner__buttons{
+margin-bottom: 1rem;
+}
+
+.banner__button{
+  border: none;
+  outline: none;
+  background: linear-gradient(217deg, rgba(29, 29, 29, 0.95), rgba(61, 61, 61, 0.1) 70.19% );
+  color: #fff;
+  padding: 0.85rem 1.35rem;
+  margin-right: 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: transform 0.5s;
+}
+
+.banner__button:hover{
+  transform: scale(1.2);
+}
+
+@media (max-width: 500px){
+  .banner{
+    max-width: 100%;
+  }
+
+  .banner__title{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner__button{
+    padding: 0.5rem 1rem;
+  }
+}
