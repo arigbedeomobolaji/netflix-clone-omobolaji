@@ -4,9 +4,12 @@
 	"description": "",
 	"main": "index.js",
 	"type": "module",
+	"engines": {
+		"node": "14.x"
+	},
 	"scripts": {
 		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
-		"herokun-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"repository": {
 		"type": "git",
@@ -25,7 +28,7 @@
 		"express": "^4.17.1",
 		"express-async-handler": "^1.1.4",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.13.2",
+		"mongoose": "^5.13.9",
 		"nodemon": "^2.0.9",
 		"save-dev": "0.0.1-security"
 	}
