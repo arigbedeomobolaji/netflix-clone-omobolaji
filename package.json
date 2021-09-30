@@ -8,7 +8,7 @@
 		"node": "14.x"
 	},
 	"scripts": {
-		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+		"start": "nodemon --watch backend --exec node --experimental-modules server.js",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"repository": {
@@ -29,7 +29,9 @@
 		"express-async-handler": "^1.1.4",
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^5.13.9",
-		"nodemon": "^2.0.9",
 		"save-dev": "0.0.1-security"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.13"
 	}
 }
