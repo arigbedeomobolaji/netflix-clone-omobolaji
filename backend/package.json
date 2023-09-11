@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"type": "module",
 	"engines": {
-		"node": "14.x"
+		"node": "18.x"
 	},
 	"scripts": {
 		"start:dev": "nodemon --watch backend --exec node --experimental-modules server.js",
