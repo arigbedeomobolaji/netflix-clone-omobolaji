@@ -5,7 +5,7 @@ import Youtube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
 import './Row.css';
 
-function Row({ title, fetchPath, isLarge }) {
+function Row({ title, fetchPath, isLarge, column }) {
 	const [movies, setMovies] = useState([]);
 	const [videoId, setVideoId] = useState('');
 	const fetchData = useSelector((state) => state.fetchData);
@@ -48,7 +48,7 @@ function Row({ title, fetchPath, isLarge }) {
 	}, [data, fetchPath]);
 
 	return (
-		<div className='row'>
+		<div className={`row ${column}`}>
 			<h2 className='row__title'>{title}</h2>
 			{movies.length > 0 && (
 				<div className='row__images'>
