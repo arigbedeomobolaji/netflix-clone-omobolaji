@@ -13,16 +13,8 @@
 		"client": "npm start --prefix client",
 		"client-install": "npm install --prefix client"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/arigbedeomobolaji/netfelix-clone.git"
-	},
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/arigbedeomobolaji/netfelix-clone/issues"
-	},
-	"homepage": "https://github.com/arigbedeomobolaji/netfelix-clone#readme",
 	"dependencies": {
 		"axios": "^0.21.1",
 		"bcryptjs": "^2.4.3",
